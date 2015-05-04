@@ -45,6 +45,62 @@
 
     </md-sidenav>
 
+    <div layout="column" class="relative" layout-fill role="main">
+
+      <md-toolbar>
+        <div class="md-toolbar-tools" layout >
+          <md-button hide-gt-md class="md-icon-button">
+            <ng-md-icon layout layout-align="center center" icon="menu"></ng-md-icon>
+          </md-button>
+
+          <h3>Room 1</h3>
+        </div>
+      </md-toolbar>
+
+      <md-content>
+
+        <div layout="column" layout-fill layout-margin>
+
+          <md-card>
+            <md-card-content>
+              <md-list>
+                <md-item>
+                  <md-item-content>
+                    <div>
+                      <h6>Mohammad Khatib</h6>
+                      <p>Hey you guys do you wanna do lunch after this?</p>
+                      <p>3 mins ago</p>
+                    </div>
+                  </md-item-content>
+                  <md-divider></md-divider>
+                </md-item>
+                <md-item>
+                  <md-item-content>
+                    <div>
+                      <h6>Rasha Khatib</h6>
+                      <p>Sure, what do you have in mind?</p>
+                      <p>3 mins ago</p>
+                    </div>
+                  </md-item-content>
+                </md-item>
+              </md-list>
+            </md-card-content>
+          </md-card>
+
+          <md-card>
+            <md-card-content>
+                <md-input-container>
+                  <label>Write a message... (hit enter to send)</label>
+                  <input ng-model="newMessage">
+                </md-input-container>
+            </md-card-content>
+          </md-card>
+
+        </div>
+      </md-content>
+    </div>
+
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
