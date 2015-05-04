@@ -41,7 +41,7 @@
         </md-toolbar>
 
         <md-list>
-          <md-list-item md-ink-ripple ng-repeat="room in rooms">
+          <md-list-item ng-repeat="room in rooms" ng-click="openRoom(room)">
             {{room.name}}
           </md-list-item>
         </md-list>
@@ -86,6 +86,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/nav.js"></script>
+        <script src="scripts/controllers/room.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>

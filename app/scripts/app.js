@@ -26,6 +26,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/room/:id', {
+        templateUrl: 'views/room.html',
+        controller: 'RoomCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
