@@ -3,8 +3,7 @@
 angular.module('chatterApp').
   controller('NavCtrl', function ($scope, $location){
     $scope.currentUser = {
-      name: 'Mohammad Khatib',
-      email: 'mkhatib727@gmail.com'
+      name: 'Mohammad Khatib'
     };
 
     $scope.rooms = [{

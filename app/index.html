@@ -34,9 +34,11 @@
             </md-button>
           </div>
 
-          <div layout="column" class="md-toolbar-tools-bottom inset">
-            <div>{{currentUser.name}}</div>
-            <div>{{currentUser.email}}</div>
+          <div class="md-toolbar-tools" layout="column" class="md-toolbar-tools-bottom inset">
+            <md-input-container md-theme="input" flex>
+              <label>Your name</label>
+              <input ng-model="currentUser.name">
+            </md-input-container>
           </div>
         </md-toolbar>
 
