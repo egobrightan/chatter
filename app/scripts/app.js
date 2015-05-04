@@ -16,7 +16,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngMaterial',
+    'ngMdIcons'
   ])
   .config(function ($routeProvider) {
     $routeProvider
