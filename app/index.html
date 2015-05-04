@@ -26,7 +26,14 @@
       <div ng-controller="NavCtrl as navCtrl">
 
         <md-toolbar class="md-tall md-hue-2">
-          <h1 class="md-toolbar-tools">Chat Rooms</h1>
+          <div class="md-toolbar-tools">
+            <h3>Chat Rooms</h3>
+            <span flex></span>
+            <md-button class="md-icon-button">
+              <ng-md-icon icon="add" layout layout-align="center center"></ng-md-icon>
+            </md-button>
+          </div>
+
           <div layout="column" class="md-toolbar-tools-bottom inset">
             <div>{{currentUser.name}}</div>
             <div>{{currentUser.email}}</div>
