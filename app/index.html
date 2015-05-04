@@ -8,6 +8,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
 
@@ -22,82 +23,26 @@
     <![endif]-->
 
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
+      <div ng-controller="NavCtrl as navCtrl">
 
-      <md-toolbar class="md-tall md-hue-2">
-        <h1 class="md-toolbar-tools">Chat Rooms</h1>
-        <div layout="column" class="md-toolbar-tools-bottom inset">
-          <div>Mohammad Khatib</div>
-          <div>mkhatib727@gmail.com</div>
-        </div>
-      </md-toolbar>
+        <md-toolbar class="md-tall md-hue-2">
+          <h1 class="md-toolbar-tools">Chat Rooms</h1>
+          <div layout="column" class="md-toolbar-tools-bottom inset">
+            <div>{{currentUser.name}}</div>
+            <div>{{currentUser.email}}</div>
+          </div>
+        </md-toolbar>
 
-      <md-list>
-        <md-list-item md-ink-ripple>
-          Room 1
-        </md-list-item>
-        <md-list-item md-ink-ripple>
-          Room 2
-        </md-list-item>
-        <md-list-item md-ink-ripple>
-          Room 3
-        </md-list-item>
-      </md-list>
+        <md-list>
+          <md-list-item md-ink-ripple ng-repeat="room in rooms">
+            {{room.name}}
+          </md-list-item>
+        </md-list>
 
+      </div>
     </md-sidenav>
 
-    <div layout="column" class="relative" layout-fill role="main">
-
-      <md-toolbar>
-        <div class="md-toolbar-tools" layout >
-          <md-button hide-gt-md class="md-icon-button">
-            <ng-md-icon layout layout-align="center center" icon="menu"></ng-md-icon>
-          </md-button>
-
-          <h3>Room 1</h3>
-        </div>
-      </md-toolbar>
-
-      <md-content>
-
-        <div layout="column" layout-fill layout-margin>
-
-          <md-card>
-            <md-card-content>
-              <md-list>
-                <md-item>
-                  <md-item-content>
-                    <div>
-                      <h6>Mohammad Khatib</h6>
-                      <p>Hey you guys do you wanna do lunch after this?</p>
-                      <p>3 mins ago</p>
-                    </div>
-                  </md-item-content>
-                  <md-divider></md-divider>
-                </md-item>
-                <md-item>
-                  <md-item-content>
-                    <div>
-                      <h6>Rasha Khatib</h6>
-                      <p>Sure, what do you have in mind?</p>
-                      <p>3 mins ago</p>
-                    </div>
-                  </md-item-content>
-                </md-item>
-              </md-list>
-            </md-card-content>
-          </md-card>
-
-          <md-card>
-            <md-card-content>
-                <md-input-container>
-                  <label>Write a message... (hit enter to send)</label>
-                  <input ng-model="newMessage">
-                </md-input-container>
-            </md-card-content>
-          </md-card>
-
-        </div>
-      </md-content>
+    <div layout-fill role="main" ng-view>
     </div>
 
 
@@ -114,7 +59,9 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-messages/angular-messages.js"></script>
@@ -131,6 +78,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>

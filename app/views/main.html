@@ -1,23 +1,42 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<md-toolbar>
+  <div class="md-toolbar-tools" layout >
+    <md-button hide-gt-md class="md-icon-button">
+      <ng-md-icon layout layout-align="center center" icon="menu"></ng-md-icon>
+    </md-button>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <h3>{{room.name}}</h3>
+  </div>
+</md-toolbar>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+<md-content>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+  <div layout="column" layout-fill layout-margin>
+
+    <md-card>
+      <md-card-content>
+        <md-list>
+          <md-item ng-repeat="item in activity">
+            <md-item-content>
+              <div>
+                <h6>{{item.user.name}}</h6>
+                <p>{{item.message}}</p>
+                <p>{{item.when}}</p>
+              </div>
+            </md-item-content>
+            <md-divider></md-divider>
+          </md-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+
+    <md-card>
+      <md-card-content>
+          <md-input-container>
+            <label>Write a message... (hit enter to send)</label>
+            <input ng-model="newMessage">
+          </md-input-container>
+      </md-card-content>
+    </md-card>
+
+  </div>
+</md-content>
