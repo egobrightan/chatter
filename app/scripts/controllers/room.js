@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('chatterApp')
-  .controller('RoomCtrl', function ($scope) {
+  .controller('RoomCtrl', function ($scope, $firebaseObject, $routeParams) {
+    var roomRef = new Firebase("https://chatter-bzu.firebaseio.com/rooms/" + $routeParams.id);
 
-    $scope.room = {
-      name: 'Room 1'
-    };
+    $scope.room = $firebaseObject(roomRef);
 
     $scope.activity = [
       {
