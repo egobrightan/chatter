@@ -35,10 +35,15 @@
           </div>
 
           <div class="md-toolbar-tools" layout="column" class="md-toolbar-tools-bottom inset">
-            <md-input-container md-theme="input" flex>
-              <label>Your name</label>
-              <input ng-model="currentUser.name">
-            </md-input-container>
+            <md-button ng-click="loginWithFacebook()" ng-hide="currentUser.name != 'Anonoymous'">
+              Facebook Login
+            </md-button>
+
+            <div ng-if="currentUser.name != 'Anonoymous'" class="user-profile">
+              <img ng-src="{{currentUser.avatar}}">
+              <span>{{currentUser.name}}</span>
+            </div>
+
           </div>
         </md-toolbar>
 
