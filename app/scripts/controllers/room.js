@@ -6,7 +6,6 @@ angular.module('chatterApp')
     var messagesRef = new Firebase("https://chatter-bzu.firebaseio.com/messages/" + $routeParams.id);
 
     $scope.room = $firebaseObject(roomRef);
-
     $scope.messages = $firebaseArray(messagesRef);
 
     $scope.toggleMenu = function(menu) {

@@ -18,13 +18,15 @@
         <md-list>
           <md-item class="message" ng-repeat="message in messages">
             <md-item-content>
-              <div>
-                <h6>{{message.user.name}}</h6>
-                <p class="text">{{message.message}}</p>
-                <p class="note">{{message.when|date:'medium'}}</p>
+              <div layout="row" layout-align="start center" class="user-profile large">
+                <img ng-src="{{message.user.avatar}}" layout layout-margin>
+                <div layout-margin>
+                  <h6>{{message.user.name}}</h6>
+                  <p class="text">{{message.message}}</p>
+                  <p class="note">{{message.when|date:'medium'}}</p>
+                </div>
               </div>
             </md-item-content>
-            <md-divider></md-divider>
           </md-item>
         </md-list>
       </md-card-content>
