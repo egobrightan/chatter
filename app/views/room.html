@@ -15,12 +15,12 @@
     <md-card>
       <md-card-content>
         <md-list>
-          <md-item ng-repeat="item in activity">
+          <md-item ng-repeat="message in messages">
             <md-item-content>
               <div>
-                <h6>{{item.user.name}}</h6>
-                <p>{{item.message}}</p>
-                <p>{{item.when}}</p>
+                <h6>{{message.user.name}}</h6>
+                <p>{{message.message}}</p>
+                <p>{{message.when}}</p>
               </div>
             </md-item-content>
             <md-divider></md-divider>
@@ -33,7 +33,7 @@
       <md-card-content>
           <md-input-container>
             <label>Write a message... (hit enter to send)</label>
-            <input ng-model="newMessage">
+            <input ng-model="newMessage" ng-keypress="sendMessage($event, newMessage)">
           </md-input-container>
       </md-card-content>
     </md-card>

@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('chatterApp').
-  controller('NavCtrl', function ($scope, $location, $firebaseArray){
+  controller('NavCtrl', function ($scope, $rootScope, $location, $firebaseArray){
     var roomsRef = new Firebase("https://chatter-bzu.firebaseio.com/rooms");
 
-    $scope.currentUser = {
+    $rootScope.currentUser = {
       name: 'Mohammad Khatib'
     };
 
