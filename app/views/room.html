@@ -1,5 +1,5 @@
 <md-toolbar>
-  <div class="md-toolbar-tools" layout >
+  <div class="md-toolbar-tools">
     <md-button hide-gt-md class="md-icon-button" ng-click="toggleMenu('left')">
       <ng-md-icon layout layout-align="center center" icon="menu"></ng-md-icon>
     </md-button>
@@ -8,9 +8,8 @@
   </div>
 </md-toolbar>
 
-<md-content>
-
-  <div layout="column" layout-fill layout-margin>
+<md-content flex md-scroll-y>
+  <ui-view layout="column" layout-fill layout-padding>
 
     <md-card>
       <md-card-content>
@@ -41,5 +40,5 @@
       </md-card-content>
     </md-card>
 
-  </div>
+  </ui-view>
 </md-content>
