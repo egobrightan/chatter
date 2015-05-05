@@ -1,0 +1,17 @@
+
+.message h6 {
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.message .text {
+  font-size: 1.2em;
+}
+
+.message .note {
+  font-size: 0.8em;
+  color: #8a8a8a;
+  padding: 0;
+  margin: 0;
+}

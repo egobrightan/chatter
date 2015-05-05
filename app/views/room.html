@@ -14,13 +14,14 @@
 
     <md-card>
       <md-card-content>
+        <div ng-show="!messages[0]">There are no messages yet in this room. Be the first to post something!</div>
         <md-list>
-          <md-item ng-repeat="message in messages">
+          <md-item class="message" ng-repeat="message in messages">
             <md-item-content>
               <div>
                 <h6>{{message.user.name}}</h6>
-                <p>{{message.message}}</p>
-                <p>{{message.when}}</p>
+                <p class="text">{{message.message}}</p>
+                <p class="note">{{message.when|date:'medium'}}</p>
               </div>
             </md-item-content>
             <md-divider></md-divider>
