@@ -18,7 +18,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial',
-    'ngMdIcons'
+    'ngMdIcons',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
