@@ -2,8 +2,8 @@
 
 angular.module('chatterApp').
   controller('NavCtrl', function ($scope, $rootScope, $location, $firebaseArray, $mdSidenav, $timeout, $firebaseAuth){
-    var ref = new Firebase("https://chatter-bzu.firebaseio.com");
-    var roomsRef = new Firebase("https://chatter-bzu.firebaseio.com/rooms");
+    var ref = new Firebase("https://msports.firebaseio.com");
+    var roomsRef = new Firebase("https://msports.firebaseio.com/rooms");
     var authObj = $firebaseAuth(ref);
 
     var setCurrentUserFromAuthData = function(authData) {
