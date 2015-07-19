@@ -2,8 +2,8 @@
 
 angular.module('chatterApp')
   .controller('RoomCtrl', function ($scope, $rootScope, $firebaseObject, $firebaseArray, $routeParams, $mdSidenav) {
-    var roomRef = new Firebase("https://chatter-bzu.firebaseio.com/rooms/" + $routeParams.id);
-    var messagesRef = new Firebase("https://chatter-bzu.firebaseio.com/messages/" + $routeParams.id);
+    var roomRef = new Firebase("https://msports.firebaseio.com/rooms/" + $routeParams.id);
+    var messagesRef = new Firebase("https://msports.firebaseio.com/messages/" + $routeParams.id);
 
     $scope.room = $firebaseObject(roomRef);
     $scope.messages = $firebaseArray(messagesRef);
